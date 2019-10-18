@@ -57,6 +57,16 @@ const authUtil = {
             }
         });
     },
+    isServiceProvider: async(req, res, next) => {
+        checkToken(req, res, (user)=>{
+
+            if(user.grade === 'SERVICE_PROVIDER'){
+                next();
+            }else{
+                return res.json(util.successFalse(statusCode.UNAUTHORIZED, resMessage.ONLY_SERVICE_PROVIDER));
+            }
+        });
+    },
     isCommentWriter: async(req, res, next) => {
         checkToken(req, res, (user) => {
             const { replyIdx } = req.params;

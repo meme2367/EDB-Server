@@ -48,16 +48,21 @@ module.exports = { // 두 개의 메소드 module화
         try {
             
             var connection = await pool.getConnection(); 
-            console.log("query");
-            console.log(query);
-            console.log("value");
-            console.log(value);
+
 
             result = await connection.query(query, value) || null;
-            console.log(result);
+
+console.log("dbinputquery");
+            console.log(inputquery);
+
+console.log("dbinputvalue");
+            console.log(inputvalue);
+
+            console.log("dbresult");
+            console.log(result[0]);
+
         } catch (err) {
-            	console.log("poolerr");
-		console.log(err);
+
             connection.rollback(() => {});
             next(err);
         } finally {

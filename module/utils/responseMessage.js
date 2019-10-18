@@ -81,6 +81,7 @@ module.exports = {
     EXPRIED_TOKEN: "만료된 토큰입니다.",
     ONLY_ADMIN: "관리자만 가능한 기능입니다.",
     ONLY_WRITER: "작성자만 가능한 기능입니다.",
+    ONLY_SERVICE_PROVIDER:"SERVICE_PROVIDER만 가능한 기능입니다.",
     EMPTY_REFRESH_TOKEN: "재발급 토큰이 존재하지 않습니다.",
     CREATE_TOKEN: "토큰 발급 완료.",
     REFRESH_TOKEN: "토큰 재발급 완료.",
@@ -172,5 +173,9 @@ module.exports = {
     VOTE_LAST_SELECT_SUCCESS: "지난 투표 조회 성공",
     VOTE_SUGGEST_ERROR: "투표 제안 에러",
     VOTE_SUGGEST_SUCCESS: "투표 제안 성공",
-    CREATOR_SELECT_PROFILE_NOTHING:"크리에이터 프로필이 존재하지 않습니다."
+    CREATOR_SELECT_PROFILE_NOTHING:"크리에이터 프로필이 존재하지 않습니다.",
+
+    POST_EXTERNAL_SERVICE_SUCCESS:"외부 서비스 등록 성공",
+    POST_EXTERNAL_SERVICE_ERROR:"외부 서비스 등록 실패",
+
 };

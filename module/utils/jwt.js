@@ -6,13 +6,13 @@ const secretOrPrivateKey = "jwtSecretKey!";
 const options = {
     algorithm: "HS256",
     expiresIn: "14d",
-    issuer: "yang"
+    issuer: "myeong"
 };
 
 const refreshOptions = {
     algorithm: "HS256",
     expiresIn: "28d",
-    issuer: "yang"
+    issuer: "myeong"
 };
 
 module.exports = {
@@ -20,8 +20,7 @@ module.exports = {
 
         const payload = {
             user_idx: user[0].idx,
-            grade: user[0].grade,
-            name: user[0].name
+            grade: user[0].grade
         };
         const result = {
             token: jwt.sign(payload, secretOrPrivateKey, options),
@@ -52,8 +51,7 @@ module.exports = {
     refresh: (user) => {
         const payload = {
             user_idx: user[0].idx,
-            grade: user[0].grade,
-            name: user[0].name
+            grade: user[0].grade
         };
 
         return jwt.sign(payload, secretOrPrivateKey, options);
