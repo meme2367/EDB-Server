@@ -106,7 +106,8 @@ router.get('/',authUtil.isLoggedin, async (req, res) => {
     let getPostQuery  = "SELECT user_idx,external_service_idx,name,url \
      FROM user_external_service \
 INNER JOIN external_service ON external_service_idx = idx \
-WHERE user_idx = ?";
+WHERE user_idx = ? \
+GROUP BY external_service_idx";
     const userIdx = req.decoded.user_idx;
 
     const getPostResult = await db.queryParam_Parse(getPostQuery,[userIdx]);
@@ -128,7 +129,9 @@ router.get('/detail/:externalIdx',authUtil.isLoggedin,async (req, res) => {
     let getPostQuery  = "SELECT idx AS'external_service_detail_idx',name AS 'name', if_achieve AS 'if_achieve' \
 FROM external_service_detail ed \
 INNER JOIN user_external_service u ON ed.external_service_idx = u.external_service_idx \
+AND ed.idx = u.external_service_detail_idx \
 WHERE u.user_idx = ? AND u.external_service_idx = ?";
+
 
     const getPostResult = await db.queryParam_Parse(getPostQuery,[userIdx,externalIdx]);
 
