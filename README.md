@@ -51,7 +51,7 @@ host,port, user,database,password를 본인의 데이터 베이스 설정에 맞
 2. GITWIKI를 참고하여 postman을 이용하여 테스트 가능.
 
 ### DOCKER 이미지와 컨테이너 생성(추후 추가 예정)
-run by: 
+run by : 
 ```
 docker build -t 도커 이미지명 .
 docker run -dit --name 도커컨테이너명 -p 연결port:연결port 도커이미지명
