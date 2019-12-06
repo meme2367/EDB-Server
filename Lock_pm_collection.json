@@ -84,7 +84,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"id\":\"meme23678\",\n\t\"passwd\":\"123\",\n\t\"email\":\"meme91322367@gmail.com\",\n\t\"grade\":\"SERVICE_PROVIDER\"\n}"
+							"raw": "{\n\t\"id\":\"meme2367\",\n\t\"passwd\":\"123\",\n\t\"email\":\"meme91322367@gmail.com\",\n\t\"grade\":\"SERVICE_PROVIDER\"\n}"
 						},
 						"url": {
 							"raw": "localhost:3000/api/auth/signup2",
