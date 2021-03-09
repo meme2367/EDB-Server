@@ -164,8 +164,3 @@ docker exec -it dbcontainer /bin/bash
  mysql -h 127.0.0.1 --port 3306 -uroot
 
 ```
-
-## 기타 - ERD
-<div>
-<img src="https://user-images.githubusercontent.com/29730565/69398217-9d7a9500-0d2c-11ea-986d-9582c565c40f.png">
-</div>
